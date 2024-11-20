@@ -9,7 +9,7 @@ FlightMate is a platform that connects travelers with people who need items deli
 1. **Sign Up / Log In**: The sender creates an account or logs into their existing account using ZAPT authentication.
 
 2. **Post a Delivery Request**:
-   - Clicks on "Create Delivery Request".
+   - Clicks on "Create Request".
    - Fills in item details:
      - **Item Description**: Detailed description of the item.
      - **From Airport**: Selects the departure airport.
@@ -19,16 +19,16 @@ FlightMate is a platform that connects travelers with people who need items deli
 
 3. **Manage Requests**:
    - Views a list of their active delivery requests.
-   - Can edit or cancel a delivery request.
+   - Can view the status of each request.
 
 4. **Communicate with Traveler**:
-   - Once a traveler accepts the delivery request, the sender can chat with the traveler to arrange handover details.
+   - Once a traveler accepts the delivery request (feature coming soon), the sender can chat with the traveler to arrange handover details.
 
 ### 2. Traveler Journey
 
 1. **Sign Up / Log In**: The traveler creates an account or logs into their existing account using ZAPT authentication.
 
-2. **Add Travel Itinerary**:
+2. **Add Travel Plan**:
    - Clicks on "Add Travel Plan".
    - Enters travel details:
      - **From Airport**: Selects their departure airport.
@@ -36,43 +36,27 @@ FlightMate is a platform that connects travelers with people who need items deli
      - **Travel Date**: Specifies the date of travel.
 
 3. **Browse Delivery Requests**:
-   - Views a list of delivery requests matching their travel route.
-   - Can filter requests by date, reward, or item size.
+   - Views a list of delivery requests matching their travel route (feature coming soon).
+   - Can filter requests by date, reward, or item size (future enhancement).
 
 4. **Accept a Delivery Request**:
    - Selects a delivery request to view more details.
-   - Clicks "Accept Delivery" to agree to deliver the item.
+   - Clicks "Accept Delivery" to agree to deliver the item (feature coming soon).
    - The sender is notified of the acceptance.
 
 5. **Communicate with Sender**:
-   - Chats with the sender to arrange pickup and drop-off details.
+   - Chats with the sender to arrange pickup and drop-off details (feature coming soon).
 
-### 3. Communication Journey
+### 3. Future Features:
 
-1. **In-App Chat**:
-   - Once a delivery request is accepted, both the sender and traveler can use the in-app chat to communicate securely.
-
-2. **Notifications**:
-   - Users receive notifications when:
-     - A delivery request is accepted.
-     - New messages are received.
-     - Delivery status updates occur.
-
-### 4. Delivery Completion
-
-1. **Mark as Delivered**:
-   - Traveler marks the delivery as completed once the item is handed over at the destination.
-
-2. **Confirm Delivery**:
-   - Sender confirms that they have received the item.
-
-3. **Release Reward**:
-   - Once both parties confirm the delivery, the reward is released to the traveler.
+- **In-App Chat**: Secure communication between sender and traveler.
+- **Notifications**: Real-time updates on request status and messages.
+- **Delivery Completion**: Marking deliveries as completed and releasing rewards.
 
 ## External APIs Used
 
 - **Airport Data API**: To fetch a list of airports for selection.
-- **Notifications API**: To send real-time notifications to users.
+  - **Note**: Requires `AIRPORT_API_KEY` to be set in the environment variables.
 
 ## Environment Variables
 
@@ -80,3 +64,13 @@ FlightMate is a platform that connects travelers with people who need items deli
 - `VITE_PUBLIC_SENTRY_DSN`: DSN for Sentry error logging.
 - `VITE_PUBLIC_APP_ENV`: Application environment (e.g., production, development).
 - `AIRPORT_API_KEY`: API key for accessing the Airport Data API.
+- `NEON_DB_URL`: Database connection URL for Neon database.
+- `PROJECT_ID`: Project ID for Sentry logging.
+
+## Notes
+
+- The app is fully responsive and designed with mobile-first principles.
+- All API interactions include loading states to enhance user experience.
+- The app includes error handling and reporting via Sentry.
+- Vercel Analytics is integrated for tracking usage.
+- Remember to run database migrations to set up the required tables.

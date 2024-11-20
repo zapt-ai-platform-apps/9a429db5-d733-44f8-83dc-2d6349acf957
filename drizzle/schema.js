@@ -10,3 +10,12 @@ export const requests = pgTable('requests', {
   reward: numeric('reward').notNull(),
   createdAt: timestamp('created_at').defaultNow(),
 });
+
+export const travelPlans = pgTable('travel_plans', {
+  id: serial('id').primaryKey(),
+  userId: uuid('user_id').notNull(),
+  fromAirport: text('from_airport').notNull(),
+  toAirport: text('to_airport').notNull(),
+  travelDate: timestamp('travel_date').notNull(),
+  createdAt: timestamp('created_at').defaultNow(),
+});

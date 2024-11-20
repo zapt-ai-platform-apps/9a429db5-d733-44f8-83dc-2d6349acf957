@@ -19,7 +19,8 @@
     "solid-markdown": "^2.0.13",
     "@vercel/analytics": "^1.4.0",
     "@sentry/browser": "^8.35.0",
-    "@sentry/node": "^8.35.0"
+    "@sentry/node": "^8.35.0",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
