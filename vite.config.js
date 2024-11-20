@@ -11,6 +11,7 @@ export default defineConfig({
     conditions: ['development', 'browser'],
   },
   optimizeDeps: {
+    include: ['@vercel/analytics'],
     exclude: ['drizzle-orm', '@neondatabase/serverless']
   }
 });
