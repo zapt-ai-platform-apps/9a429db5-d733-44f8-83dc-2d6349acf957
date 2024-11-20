@@ -1,6 +1,6 @@
-# FlightMate
+# New App
 
-FlightMate is a platform that connects travelers with people who need items delivered between cities. By leveraging travelers who are already flying to a destination, we provide a cost-effective and efficient solution for delivering items.
+New App is a platform that connects travelers with people who need items delivered between cities. By leveraging travelers who are already flying to a destination, we provide a cost-effective and efficient solution for delivering items.
 
 ## User Journeys
 
@@ -66,6 +66,9 @@ FlightMate is a platform that connects travelers with people who need items deli
 - `AIRPORT_API_KEY`: API key for accessing the Airport Data API.
 - `NEON_DB_URL`: Database connection URL for Neon database.
 - `PROJECT_ID`: Project ID for Sentry logging.
+- `APP_ID`: Application ID for backend services.
+- `SENTRY_DSN`: DSN for Sentry error logging in backend.
+- `APP_ENV`: Application environment for backend.
 
 ## Notes
 
@@ -74,3 +77,4 @@ FlightMate is a platform that connects travelers with people who need items deli
 - The app includes error handling and reporting via Sentry.
 - Vercel Analytics is integrated for tracking usage.
 - Remember to run database migrations to set up the required tables.
+- Ensure environment variables are correctly set for both frontend and backend.
